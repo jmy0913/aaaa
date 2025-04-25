@@ -1,3 +1,6 @@
+# 터미널에서 아래 명령어부터 실행
+# pip install -r requirements.txt
+
 import streamlit as st
 import pandas as pd
 import mysql.connector
@@ -20,7 +23,7 @@ def get_connection():
     )
 
 # 카카오맵 주변 장소 검색 함수
-def search_places_nearby(lat, lng, category='CE7', radius=1000):
+def search_places_nearby(lat, lng, category='CE7', radius=2000):
     url = "https://dapi.kakao.com/v2/local/search/category.json"
     headers = {"Authorization": f"KakaoAK {KAKAO_API_KEY}"}
     params = {
